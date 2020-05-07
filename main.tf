@@ -19,11 +19,5 @@ resource "aws_instance" "gitea" {
     ami             = data.aws_ami.rhel8.id #Use latest RHEL8 AMI
     instance_type   = var.aws_instance_type
     subnet_id       = var.aws_vpc_subnet_id
-    key_name        = aws_key_pair.deployer_key.key_name
+    key_name        = var.aws_keypair_name
 }
-
-resource "aws_key_pair" "deployer_key" {
-    key_name = "redhat_deployer"
-    public_key = file(var.deployer_key_path)
-}
-

@@ -15,8 +15,8 @@ variable "aws_instance_type" {
     default = "m5.xlarge" # This will typically support a medium-large deploymnet with 100+ users.
 }
 
-variable "deployer_key_path" {
+variable "aws_keypair_name" {
     type = string
-    description = "Path to SSH public key"
-    default = "~/.ssh/id_rsa.pub"
+    description = "Name of managed AWS Keypair"
+    default = "redhat-deployer"
 }
