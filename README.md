@@ -19,7 +19,7 @@ This Terraform module is for deploying a single gitea server.
 This terraform module is designed to only handle the security group and instance deployment of a singular gitea server instance on AWS.
 
 ```
-git clone git@github.com:rhtconsulting/tf-redhat-keypair-aws.git
+git clone git@github.com:rhtconsulting/tf-gitea-server-aws.git
 terraform apply
 ```
 
